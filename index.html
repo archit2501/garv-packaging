@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Garv Packaging — Bags That Define | Non-Woven & Laminate Bags Manufacturer</title>
+<meta name="description" content="Garv Packaging — premium non-woven & laminate leader bags manufacturer. Eco-friendly, durable, customized printing, bulk orders, Pan-India delivery. Rithala, Delhi." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#0FA04A;
+    --green-d:#0A7E39;
+    --green-l:#E8F5EA;
+    --leaf:#84C341;
+    --navy:#0C2A4D;
+    --navy-2:#123a63;
+    --ink:#15231C;
+    --muted:#5E6E63;
+    --paper:#FFFFFF;
+    --soft:#F4F8F3;
+    --soft-2:#EEF3EC;
+    --line:rgba(12,42,77,.1);
+    --gold:#E0A93B;
+    --shadow:0 24px 60px -28px rgba(12,42,77,.35);
+    --display:"Sora",-apple-system,sans-serif;
+    --script:"Fraunces",Georgia,serif;
+    --body:"Plus Jakarta Sans",-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  .wrap{width:min(1200px,92vw);margin-inline:auto}
+  h1,h2,h3,h4{font-family:var(--display);line-height:1.1;letter-spacing:-.01em}
+
+  /* numbered band label */
+  .band{position:relative;padding:84px 0}
+  .snum{position:absolute;left:max(14px,calc((100vw - 1200px)/2 - 6px));top:38px;font-family:var(--display);
+    font-weight:800;font-size:2.6rem;color:var(--green);opacity:.9;z-index:1;letter-spacing:-.02em}
+  .snum::after{content:"";display:block;width:30px;height:3px;background:var(--gold);margin-top:4px;border-radius:2px}
+  .band.dark .snum,.band.green .snum{color:#fff;opacity:.95}
+  .hero .snum{top:104px}
+
+  .pill{display:inline-flex;align-items:center;gap:.55em;font-weight:600;font-size:.92rem;
+    padding:.8em 1.5em;border-radius:100px;transition:transform .25s ease,box-shadow .25s ease,background .25s;white-space:nowrap;cursor:pointer}
+  .pill svg{width:18px;height:18px}
+  .pill-green{background:var(--green);color:#fff;box-shadow:0 12px 26px -12px rgba(15,160,74,.7)}
+  .pill-green:hover{transform:translateY(-2px);background:var(--green-d)}
+  .pill-wa{background:#1FAF55;color:#fff}
+  .pill-wa:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(31,175,85,.6)}
+  .pill-ghost{border:1.6px solid rgba(255,255,255,.6);color:#fff}
+  .pill-ghost:hover{background:#fff;color:var(--navy)}
+  .pill-navy{background:var(--navy);color:#fff}
+  .pill-navy:hover{transform:translateY(-2px);background:var(--navy-2)}
+
+  .kicker{display:inline-flex;align-items:center;gap:.6em;font-size:.72rem;letter-spacing:.26em;
+    text-transform:uppercase;font-weight:700;color:var(--green)}
+  .kicker::before{content:"";width:24px;height:2px;background:var(--green);display:inline-block}
+
+  /* ---------- header ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:16px 0}
+  header.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-shadow:0 2px 20px -10px rgba(12,42,77,.3);padding:10px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo{display:flex;align-items:center;gap:11px}
+  .logo .glyph{width:46px;height:46px;border-radius:13px;flex:none;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--green),var(--leaf));color:#fff;box-shadow:0 8px 18px -8px rgba(15,160,74,.7)}
+  .logo .glyph svg{width:27px;height:27px}
+  .logo .lt{font-family:var(--display);font-weight:800;font-size:1.28rem;line-height:1;color:var(--navy)}
+  .logo .lt b{color:var(--green)}
+  .logo .lt small{display:block;font-family:var(--script);font-style:italic;font-weight:600;font-size:.78rem;
+    color:var(--muted);margin-top:3px;letter-spacing:.01em}
+  header.scrolled .logo .lt,header:not(.scrolled) .logo .lt{color:var(--navy)}
+  .nav-mid{display:flex;align-items:center;gap:28px}
+  .nav-mid a{font-size:.92rem;font-weight:600;color:var(--ink);position:relative;transition:color .2s}
+  .nav-mid a:hover{color:var(--green)}
+  .nav-mid a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--green);transition:width .25s}
+  .nav-mid a:hover::after{width:100%}
+  header:not(.scrolled) .nav-mid a{color:#fff}
+  header:not(.scrolled) .nav-mid a:hover{color:var(--leaf)}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .callbox{display:flex;align-items:center;gap:10px}
+  .callbox .ic{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;flex:none}
+  .callbox .ic svg{width:18px;height:18px}
+  .callbox small{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+  .callbox b{font-family:var(--display);font-weight:700;font-size:.98rem;color:var(--navy)}
+  header:not(.scrolled) .callbox small{color:rgba(255,255,255,.7)}
+  header:not(.scrolled) .callbox b{color:#fff}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;width:30px;height:22px;position:relative;z-index:120}
+  .menu-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+  header.scrolled .menu-toggle span{background:var(--navy)}
+  .menu-toggle span:nth-child(1){top:0}.menu-toggle span:nth-child(2){top:10px}.menu-toggle span:nth-child(3){top:20px}
+
+  /* ---------- bag illustration ---------- */
+  .bag{position:relative;display:inline-block;filter:drop-shadow(0 16px 22px rgba(12,42,77,.22))}
+  .bag svg{display:block}
+  .bag .lbl{position:absolute;left:0;right:0;top:54%;transform:translateY(-50%);text-align:center;
+    font-family:var(--display);font-weight:800;font-size:.72rem;letter-spacing:.04em;padding:0 8px;line-height:1.15}
+
+  /* ---------- 01 HERO ---------- */
+  .hero{background:radial-gradient(120% 120% at 80% 0%,#16406e 0%,var(--navy) 55%,#081d36 100%);
+    color:#fff;padding:140px 0 90px;position:relative;overflow:hidden}
+  .hero .leaf-bg{position:absolute;inset:0;pointer-events:none;opacity:.5}
+  .hero .leaf-bg svg{position:absolute;color:var(--leaf)}
+  .hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+  .hero h1 .g{color:var(--leaf);display:block}
+  .hero .tag{font-family:var(--script);font-style:italic;font-weight:600;font-size:clamp(1.6rem,3.2vw,2.4rem);
+    color:#fff;margin:6px 0 14px}
+  .hero .sub{font-size:1.12rem;color:rgba(255,255,255,.82);max-width:24em;font-weight:500}
+  .hero-feats{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 32px}
+  .feat{display:flex;flex-direction:column;align-items:center;gap:8px;width:104px;text-align:center}
+  .feat .fic{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+    background:rgba(255,255,255,.1);border:1px solid rgba(132,195,65,.5);color:var(--leaf)}
+  .feat .fic svg{width:25px;height:25px}
+  .feat span{font-size:.78rem;font-weight:600;line-height:1.25;color:rgba(255,255,255,.9)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-bags{position:relative;height:380px}
+  .hero-bags .bag{position:absolute}
+  .hero-bags .b1{left:0;bottom:18px;z-index:2}
+  .hero-bags .b2{left:130px;bottom:46px;z-index:3}
+  .hero-bags .b3{left:255px;bottom:14px;z-index:2}
+  .hero-bags .b4{right:0;bottom:50px;z-index:1}
+  .hero-bags .ground{position:absolute;left:-10px;right:-10px;bottom:0;height:30px;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent)}
+  .dots3{position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);display:flex;gap:8px}
+  .dots3 i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.3)}
+  .dots3 i.on{background:var(--leaf);width:26px;border-radius:5px}
+
+  /* ---------- 02 ECO ---------- */
+  .eco{background:linear-gradient(180deg,#F2F9EF,#E7F3E4);position:relative;overflow:hidden}
+  .eco .leaf-bg{position:absolute;inset:0;opacity:.45;pointer-events:none;color:var(--leaf)}
+  .eco .leaf-bg svg{position:absolute}
+  .eco-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .eco h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800;color:var(--navy)}
+  .eco h2 .no{color:#E23B3B}
+  .eco h2 .gr{color:var(--green)}
+  .eco-feats{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px;max-width:30rem}
+  .eco-feat{display:flex;flex-direction:column;gap:10px}
+  .eco-feat .ic{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#fff;
+    color:var(--green);box-shadow:0 12px 26px -14px rgba(15,160,74,.55)}
+  .eco-feat .ic svg{width:30px;height:30px}
+  .eco-feat b{font-family:var(--display);font-weight:700;font-size:1.02rem;color:var(--navy)}
+  .eco-feat p{font-size:.86rem;color:var(--muted);margin-top:-4px}
+  .eco-art{position:relative;display:grid;place-items:center;min-height:340px}
+  .earth{width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#3FA9F5,#1f6fb5 60%,#0d4a82);
+    position:relative;box-shadow:0 30px 60px -22px rgba(13,74,130,.6),inset -16px -16px 40px rgba(0,0,0,.25)}
+  .earth::before{content:"";position:absolute;inset:0;border-radius:50%;
+    background:radial-gradient(40% 30% at 30% 65%,rgba(15,160,74,.95),transparent 70%),radial-gradient(30% 24% at 70% 40%,rgba(15,160,74,.9),transparent 70%),radial-gradient(26% 30% at 60% 78%,rgba(10,126,57,.9),transparent 70%)}
+  .earth .crown{position:absolute;top:-26px;left:50%;transform:translateX(-50%);display:flex;gap:-4px;color:var(--green)}
+  .earth .crown svg{width:46px;height:46px;margin:0 -8px;filter:drop-shadow(0 6px 8px rgba(10,126,57,.4))}
+  .eco-art .bag{position:absolute;left:6%;bottom:8%;z-index:3}
+
+  /* ---------- 03 PRODUCTS ---------- */
+  .prod-shell{display:grid;grid-template-columns:300px 1fr;gap:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+  .prod-side{background:linear-gradient(160deg,var(--navy-2),var(--navy));color:#fff;padding:48px 38px;position:relative}
+  .prod-side h2{font-size:2.2rem;font-weight:800;margin-top:8px}
+  .prod-side .ul{width:46px;height:3px;background:var(--leaf);margin:18px 0 26px;border-radius:2px}
+  .prod-side .bagghost{position:absolute;right:-10px;bottom:60px;opacity:.16;color:#fff}
+  .prod-side .bagghost svg{width:140px;height:140px}
+  .prod-main{background:#fff;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .prod-col .ptag{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:.82rem;
+    letter-spacing:.08em;padding:.5em 1.3em;border-radius:100px;margin-bottom:22px}
+  .prod-col.lam .ptag{background:var(--navy)}
+  .prod-bags{display:flex;gap:8px;align-items:flex-end;margin-bottom:22px;min-height:120px}
+  .prod-bags .bag{flex:none}
+  .prod-bags img{width:100%;border-radius:14px;display:block;box-shadow:0 18px 36px -22px rgba(12,42,77,.5)}
+  .plist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .plist li{display:flex;align-items:center;gap:9px;font-size:.94rem;font-weight:600;color:var(--ink)}
+  .plist li svg{width:19px;height:19px;color:var(--green);flex:none}
+  .prod-col.lam .plist li svg{color:var(--navy)}
+
+  /* ---------- 04 PRINTING ---------- */
+  .print{background:#fff}
+  .print-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+  .print h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;color:var(--navy)}
+  .print h2 span{color:var(--green)}
+  .print .id{font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--ink);margin:12px 0 28px}
+  .print .id b{color:var(--green)}
+  .print-list{list-style:none;display:grid;gap:14px}
+  .print-list li{display:flex;align-items:center;gap:12px;font-weight:600;font-size:1.02rem}
+  .print-list li .c{width:26px;height:26px;border-radius:7px;background:var(--green-l);color:var(--green);
+    display:grid;place-items:center;flex:none}
+  .print-list li .c svg{width:15px;height:15px}
+  .print-bags{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;justify-content:center;position:relative}
+  .splash{position:absolute;inset:-20px;background:
+    radial-gradient(circle at 15% 30%,rgba(226,59,59,.18),transparent 22%),
+    radial-gradient(circle at 80% 20%,rgba(15,160,74,.18),transparent 22%),
+    radial-gradient(circle at 50% 85%,rgba(224,169,59,.2),transparent 22%),
+    radial-gradient(circle at 90% 80%,rgba(63,169,245,.18),transparent 22%);
+    pointer-events:none;border-radius:30px}
+
+  /* ---------- 05 MANUFACTURING ---------- */
+  .mfg{background:#fff;padding:0}
+  .mfg-grid{display:grid;grid-template-columns:330px 1fr;min-height:340px}
+  .mfg-side{background:linear-gradient(160deg,var(--green),var(--green-d));color:#fff;padding:50px 40px;display:flex;flex-direction:column;justify-content:center}
+  .mfg-side h2{font-size:2rem;font-weight:800;line-height:1.05}
+  .mfg-side ul{list-style:none;margin-top:26px;display:grid;gap:14px}
+  .mfg-side li{display:flex;align-items:center;gap:11px;font-weight:600}
+  .mfg-side li svg{width:20px;height:20px;flex:none}
+  .mfg-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0a3a1f}
+  .mfg-photo{position:relative;background:linear-gradient(160deg,#16513a,#0c3324);display:flex;
+    flex-direction:column;align-items:center;justify-content:center;gap:14px;color:rgba(255,255,255,.85);padding:24px;min-height:200px}
+  .mfg-photo svg{width:54px;height:54px;color:var(--leaf);opacity:.9}
+  .mfg-photo span{font-size:.82rem;font-weight:600;letter-spacing:.04em;text-align:center}
+  .mfg-photo::after{content:"PHOTO";position:absolute;top:12px;right:12px;font-size:.58rem;letter-spacing:.2em;
+    color:rgba(255,255,255,.35);font-weight:700}
+
+  /* ---------- 06 DELIVERY ---------- */
+  .delivery{background:linear-gradient(180deg,#F4F8F3,#EAF2E7)}
+  .del-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center}
+  .del h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--navy)}
+  .del h2 span{color:var(--green)}
+  .del-states{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;max-width:30rem}
+  .del-states li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem}
+  .del-states li svg{width:18px;height:18px;color:var(--green);flex:none}
+  .map-card{position:relative;background:#fff;border-radius:22px;padding:30px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .map-india{display:flex;justify-content:center;width:100%;position:relative}
+  .map-india>img{max-width:470px;width:100%;height:auto;display:block;filter:drop-shadow(0 12px 24px rgba(12,42,77,.16))}
+  .map-truck-overlay{position:absolute;bottom:1%;left:50%;transform:translateX(-50%);width:40%;max-width:188px;z-index:2;filter:drop-shadow(0 8px 12px rgba(12,42,77,.35))}
+  .map-card .hub{position:absolute;left:42%;top:46%;width:16px;height:16px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 0 6px rgba(15,160,74,.2);z-index:3}
+  .map-card .route{position:absolute;left:42%;top:46%;height:1.5px;background:linear-gradient(90deg,var(--green),transparent);transform-origin:left center;z-index:2;opacity:.55}
+  .map-card .node{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--navy);z-index:3}
+  .map-card .truck{position:absolute;right:26px;bottom:24px;color:var(--navy);z-index:4}
+  .map-card .truck svg{width:120px;height:auto}
+  .map-card .indlabel{position:absolute;left:28px;top:24px;font-family:var(--display);font-weight:800;color:rgba(12,42,77,.1);font-size:2.4rem}
+
+  /* ---------- 07 WHY ---------- */
+  .why{background:linear-gradient(160deg,var(--navy-2),var(--navy));color:#fff}
+  .why-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800}
+  .why-head h2 span{color:var(--leaf)}
+  .why-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:46px}
+  .why-item{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .why-item .wic{width:84px;height:84px;border-radius:50%;background:#fff;color:var(--green);display:grid;place-items:center;
+    box-shadow:0 16px 30px -16px rgba(0,0,0,.5);transition:transform .3s}
+  .why-item:hover .wic{transform:translateY(-6px)}
+  .why-item .wic svg{width:38px;height:38px}
+  .why-item span{font-weight:600;font-size:.92rem;line-height:1.3;color:rgba(255,255,255,.92)}
+
+  /* ---------- 08 GALLERY ---------- */
+  .gal-shell{display:grid;grid-template-columns:280px 1fr;gap:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+  .gal-side{background:linear-gradient(160deg,var(--green),var(--green-d));color:#fff;padding:46px 36px;display:flex;flex-direction:column;justify-content:center}
+  .gal-side h2{font-size:2rem;font-weight:800;line-height:1.05}
+  .gal-side .ul{width:46px;height:3px;background:#fff;opacity:.6;margin:16px 0 28px;border-radius:2px}
+  .gal-grid{background:#fff;padding:24px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+  .gtile{border-radius:16px;background:var(--soft);position:relative;overflow:hidden}
+  .gtile.poster{background:var(--navy)}
+  .gtile.poster img{object-fit:contain;padding:6px}
+
+  /* ---------- 09 CONTACT ---------- */
+  .contact{background:#fff}
+  .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start}
+  .contact h2{font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:800;color:var(--navy)}
+  .contact-info{list-style:none;display:grid;gap:16px;margin-top:26px}
+  .contact-info li{display:flex;align-items:center;gap:14px}
+  .contact-info li .ic{width:46px;height:46px;border-radius:12px;background:var(--green-l);color:var(--green);display:grid;place-items:center;flex:none}
+  .contact-info li .ic svg{width:21px;height:21px}
+  .contact-info li small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .contact-info li b{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--navy)}
+  .enq{background:linear-gradient(160deg,var(--soft),var(--soft-2));border:1px solid var(--line);border-radius:22px;padding:36px}
+  .enq .kicker{margin-bottom:18px}
+  .enq form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .enq input,.enq textarea{font-family:var(--body);font-size:.95rem;padding:14px 16px;border:1px solid var(--line);
+    border-radius:12px;background:#fff;width:100%;resize:vertical;transition:border-color .2s,box-shadow .2s}
+  .enq input:focus,.enq textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(15,160,74,.12)}
+  .enq .full{grid-column:1/-1}
+  .enq button{grid-column:1/-1;justify-self:start}
+
+  /* ---------- 10 FINAL CTA ---------- */
+  .final{background:linear-gradient(120deg,#F2F9EF,#E5F2E2);position:relative;overflow:hidden;text-align:center}
+  .final .leaf-bg{position:absolute;inset:0;opacity:.4;color:var(--leaf)}
+  .final .leaf-bg svg{position:absolute}
+  .final-in{position:relative;z-index:2}
+  .final h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;color:var(--navy)}
+  .final h2 span{color:var(--green);display:block}
+  .final .brand-lock{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px 0 8px}
+  .final .brand-lock .glyph{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--green),var(--leaf));color:#fff}
+  .final .brand-lock .glyph svg{width:32px;height:32px}
+  .final .brand-lock .lt{font-family:var(--display);font-weight:800;font-size:1.7rem;color:var(--navy)}
+  .final .brand-lock .lt b{color:var(--green)}
+  .final .ph{font-family:var(--display);font-weight:700;color:var(--navy);font-size:1.1rem;margin-bottom:24px}
+  .final .ph svg{width:18px;height:18px;vertical-align:-3px;margin-right:6px;color:var(--green)}
+  .final .quote{font-family:var(--script);font-style:italic;font-size:1.5rem;color:var(--green-d);margin-bottom:18px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:30px 0}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.86rem}
+  .foot-nav{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-nav a:hover{color:var(--leaf)}
+
+  /* ---------- real / generated images ---------- */
+  .logo-img{height:52px;width:auto;display:block;transition:height .35s;filter:drop-shadow(0 3px 6px rgba(0,0,0,.3))}
+  header.scrolled .logo-img{height:42px}
+  .hero-show{background:#fff;border-radius:26px;padding:20px;box-shadow:0 46px 90px -34px rgba(0,0,0,.6);position:relative}
+  .hero-show img{width:100%;display:block;border-radius:14px}
+  .hero-show .ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;
+    font-weight:700;font-size:.74rem;letter-spacing:.06em;padding:.55em 1.3em;border-radius:100px;white-space:nowrap;
+    box-shadow:0 12px 22px -8px rgba(15,160,74,.7)}
+  .eco-img{width:100%;max-width:480px;border-radius:24px;box-shadow:var(--shadow);display:block}
+  .print-img{width:100%;border-radius:18px;display:block}
+  .mfg-photo-wrap{position:relative;overflow:hidden;min-height:340px}
+  .mfg-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .cta-logo{height:88px;width:auto;display:block;filter:drop-shadow(0 8px 16px rgba(12,42,77,.28))}
+  .gtile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .gtile:hover img{transform:scale(1.07)}
+
+  /* ---------- trust strip + hero badges ---------- */
+  .trust-band{background:var(--soft);border-top:3px solid var(--green);padding:34px 0}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:stretch}
+  .trust-cell{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:6px 14px;position:relative}
+  .trust-cell:not(:last-child)::after{content:"";position:absolute;right:-12px;top:14%;bottom:14%;width:1px;background:rgba(12,42,77,.12)}
+  .trust-num{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1;color:var(--green);letter-spacing:-.01em;display:flex;align-items:center;gap:.4rem}
+  .trust-num svg{width:26px;height:26px;flex:none;color:var(--gold)}
+  .trust-label{font-family:var(--body);font-weight:600;font-size:.82rem;letter-spacing:.04em;color:var(--muted)}
+  .trust-cell.trust-fixed{flex-direction:row;gap:13px;text-align:left;align-items:center;justify-content:center}
+  .trust-shield{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;background:#fff;color:var(--green);box-shadow:0 12px 26px -14px rgba(15,160,74,.6)}
+  .trust-shield svg{width:25px;height:25px}
+  .trust-fixed b{font-family:var(--display);font-weight:700;font-size:1.02rem;line-height:1.15;color:var(--navy);display:block}
+  .trust-fixed small{font-family:var(--body);font-weight:600;font-size:.78rem;color:var(--green-d);letter-spacing:.02em}
+  @media(max-width:860px){.trust-grid{grid-template-columns:1fr 1fr;gap:30px 20px}.trust-cell:not(:last-child)::after{display:none}.trust-cell.trust-fixed{justify-content:center}}
+  @media(max-width:460px){.trust-grid{grid-template-columns:1fr}}
+  .hbadge-row{display:flex;flex-wrap:wrap;gap:11px;margin-top:18px}
+  .hbadge{display:inline-flex;align-items:center;gap:.5em;font-family:var(--body);font-weight:600;font-size:.82rem;line-height:1;color:rgba(255,255,255,.92);background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);padding:.62em 1.05em;border-radius:100px;white-space:nowrap;backdrop-filter:blur(4px)}
+  .hbadge svg{width:15px;height:15px;flex:none;color:var(--leaf)}
+
+  /* floating whatsapp */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;border-radius:50%;
+    background:#1FAF55;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(31,175,85,.7);
+    animation:pulse 2.4s infinite}
+  .wa-float svg{width:30px;height:30px;color:#fff}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,175,85,.5)}70%{box-shadow:0 0 0 16px rgba(31,175,85,0)}100%{box-shadow:0 0 0 0 rgba(31,175,85,0)}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .stagger.in>*{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+  .stagger.in>*:nth-child(2){animation-delay:.07s}.stagger.in>*:nth-child(3){animation-delay:.14s}
+  .stagger.in>*:nth-child(4){animation-delay:.21s}.stagger.in>*:nth-child(5){animation-delay:.28s}
+  .stagger.in>*:nth-child(6){animation-delay:.35s}
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:1024px){
+    .nav-mid{display:none}
+    .menu-toggle{display:block}
+    .nav-mid.mob{display:flex;position:fixed;inset:0 0 0 auto;width:min(80vw,330px);background:var(--navy);
+      flex-direction:column;justify-content:center;align-items:flex-start;padding:0 38px;gap:24px;transform:translateX(100%);transition:.4s;z-index:110}
+    .nav-mid.mob.open{transform:none}
+    .nav-mid.mob a{color:#fff;font-size:1.2rem;font-family:var(--display)}
+    .hero-grid,.eco-grid,.print-grid,.del-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .prod-shell,.gal-shell{grid-template-columns:1fr}
+    .mfg-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:repeat(3,1fr);gap:28px}
+    .callbox{display:none}
+  }
+  @media(max-width:640px){
+    .band{padding:60px 0}
+    .snum{left:16px;top:26px}
+    .hero{padding:120px 0 70px}
+    .hero-feats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;justify-items:center}
+    .feat{width:auto}
+    .eco-feats,.gal-grid{grid-template-columns:1fr 1fr}
+    .prod-main{grid-template-columns:1fr;padding:28px}
+    .plist,.del-states,.contact-info{grid-template-columns:1fr}
+    .enq form{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .mfg-photos{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .foot{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <img src="garv-assets/logo-trans.png" alt="Garv Packaging — Bags That Define" class="logo-img" />
+    </a>
+    <nav class="nav-mid" id="navMid">
+      <a href="#top">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:+919990658667" class="callbox">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+        <span><small>Call Us Now</small><b>9990658667</b></span>
+      </a>
+      <a href="https://wa.me/919990658667?text=Hi%20Garv%20Packaging%2C%20I'd%20like%20a%20free%20quote." target="_blank" rel="noopener" class="pill pill-green">Get Free Quote</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 01 HERO ===== -->
+<section class="hero" id="top">
+  <div class="leaf-bg">
+    <svg style="top:40px;left:4%;width:70px;transform:rotate(20deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z" opacity=".5"/></svg>
+    <svg style="top:160px;right:46%;width:46px;transform:rotate(-30deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z" opacity=".4"/></svg>
+    <svg style="bottom:60px;left:38%;width:56px;transform:rotate(120deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z" opacity=".35"/></svg>
+  </div>
+  <span class="snum">01</span>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>GARV<span class="g">PACKAGING</span></h1>
+      <div class="tag">Bags That Define!</div>
+      <p class="sub">Premium Non-Woven &amp; Laminate Leader Bags Manufacturer.</p>
+      <div class="hero-feats">
+        <div class="feat"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span><span>Eco-Friendly</span></div>
+        <div class="feat"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Durable Quality</span></div>
+        <div class="feat"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><circle cx="11" cy="11" r="2"/></svg></span><span>Customized Printing</span></div>
+        <div class="feat"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg></span><span>Pan India Delivery</span></div>
+      </div>
+      <div class="hero-cta">
+        <a href="https://wa.me/919990658667?text=Hi%20Garv%20Packaging%2C%20I'd%20like%20a%20free%20quote." target="_blank" rel="noopener" class="pill pill-green">Get Free Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://wa.me/919990658667" target="_blank" rel="noopener" class="pill pill-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          WhatsApp Now</a>
+      </div>
+      <div class="hbadge-row">
+        <span class="hbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>GST Registered</span>
+        <span class="hbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18M9 21v-6h6v6"/></svg>Direct Manufacturer</span>
+        <span class="hbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>Pan-India Delivery</span>
+      </div>
+    </div>
+    <div class="hero-show reveal">
+      <span class="ribbon">Premium Non-Woven Bags</span>
+      <img src="garv-assets/gen-hero-bags.png" alt="Range of premium non-woven shopping bags by Garv Packaging" />
+    </div>
+  </div>
+  <div class="wrap" style="position:relative"><div class="dots3"><i class="on"></i><i></i><i></i></div></div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<!-- TODO: replace {{YEARS}}/{{CAPACITY}}/{{CLIENTS}} with real client figures -->
+<section class="trust-band">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-cell">
+        <div class="trust-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>{{YEARS}}+</div>
+        <div class="trust-label">Years in Business</div>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>{{CAPACITY}}</div>
+        <div class="trust-label">Bags / Day Capacity</div>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>{{CLIENTS}}+</div>
+        <div class="trust-label">Happy Clients</div>
+      </div>
+      <div class="trust-cell trust-fixed">
+        <span class="trust-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <span><b>Direct Manufacturer</b><small>GST Registered</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 ECO / WHY NON-WOVEN ===== -->
+<section class="band eco" id="about">
+  <div class="leaf-bg">
+    <svg style="top:30px;left:2%;width:60px;transform:rotate(40deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z"/></svg>
+    <svg style="bottom:30px;right:4%;width:80px;transform:rotate(-20deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z"/></svg>
+  </div>
+  <span class="snum">02</span>
+  <div class="wrap eco-grid">
+    <div class="reveal">
+      <span class="kicker">Why non-woven bags?</span>
+      <h2 style="margin-top:14px">Say <span class="no">NO</span> to Plastic!<br><span class="gr">Switch to Reusable</span> Non-Woven Bags</h2>
+      <div class="eco-feats stagger">
+        <div class="eco-feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Save Environment</b><p>Cut single-use plastic for good.</p></div>
+        <div class="eco-feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><b>Reusable &amp; Sustainable</b><p>Use again and again.</p></div>
+        <div class="eco-feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 17.5 17.5M14 6h4v4M10 18H6v-4"/><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></svg></span><b>Strong &amp; Long Lasting</b><p>Carries more, lasts longer.</p></div>
+        <div class="eco-feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.2c0-1.2 1.1-1.9 2.5-1.9s2.5.6 2.5 1.7c0 2.4-5 1.6-5 4 0 1.1 1.1 1.8 2.5 1.8s2.5-.6 2.5-1.8"/></svg></span><b>Cost Effective</b><p>Great value in bulk.</p></div>
+      </div>
+    </div>
+    <div class="eco-art reveal">
+      <img src="garv-assets/gen-eco.png" alt="Reusable green non-woven bag full of fresh vegetables" class="eco-img" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 PRODUCTS ===== -->
+<section class="band" id="products" style="background:var(--soft)">
+  <span class="snum">03</span>
+  <div class="wrap">
+    <div class="prod-shell reveal">
+      <div class="prod-side">
+        <span class="kicker" style="color:var(--leaf)"><span style="background:var(--leaf)"></span></span>
+        <h2>OUR<br>PRODUCTS</h2>
+        <div class="ul"></div>
+        <p style="color:rgba(255,255,255,.78);font-size:.95rem;margin-bottom:26px">A full range of carry bags for retail, gifting, grocery &amp; brand promotion.</p>
+        <a href="#gallery" class="pill pill-green">View All Products
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="bagghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+      </div>
+      <div class="prod-main">
+        <div class="prod-col">
+          <span class="ptag">NON-WOVEN BAGS</span>
+          <div class="prod-bags">
+            <img src="garv-assets/gen-prod-nonwoven.png" alt="Non-woven D-cut, U-cut, W-cut and handle bags in many colours" loading="lazy" />
+          </div>
+          <ul class="plist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>D-Cut Bags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>W-Cut Bags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>U-Cut Bags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Handle Bags</li>
+          </ul>
+        </div>
+        <div class="prod-col lam">
+          <span class="ptag">LAMINATE LEADER BAGS</span>
+          <div class="prod-bags">
+            <img src="garv-assets/gen-prod-laminate.png" alt="Glossy BOPP-laminated leader shopping bags" loading="lazy" />
+          </div>
+          <ul class="plist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Premium Shopping Bags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Promotional Bags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Brand Printed Bags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>High Quality Laminate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 CUSTOMIZED PRINTING ===== -->
+<section class="band print">
+  <span class="snum">04</span>
+  <div class="wrap print-grid">
+    <div class="reveal">
+      <span class="kicker">Customized printing</span>
+      <h2 style="margin-top:12px">CUSTOMIZED<br><span>PRINTING</span></h2>
+      <div class="id">Your Brand <b>•</b> Your Identity</div>
+      <ul class="print-list stagger">
+        <li><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Logo Printing</li>
+        <li><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Multi Color Printing</li>
+        <li><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Bulk Orders</li>
+        <li><span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Promotional Bags</li>
+      </ul>
+    </div>
+    <div class="print-bags reveal">
+      <img src="garv-assets/gen-printing.png" alt="Non-woven bags with custom multi-colour brand logo printing" class="print-img" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 MANUFACTURING ===== -->
+<section class="band mfg" style="padding:0">
+  <span class="snum" style="color:rgba(255,255,255,.3)">05</span>
+  <div class="wrap" style="max-width:100%;width:100%">
+    <div class="mfg-grid reveal">
+      <div class="mfg-side" style="padding-left:max(40px,calc((100vw - 1200px)/2 + 40px))">
+        <span class="kicker" style="color:#fff"><span style="background:#fff"></span>Direct Manufacturer</span>
+        <h2 style="margin-top:14px">DIRECT<br>MANUFACTURER</h2>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Modern Machinery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality Production</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Large Capacity</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fast Dispatch</li>
+        </ul>
+      </div>
+      <div class="mfg-photo-wrap">
+        <img src="garv-assets/gen-factory.png" alt="Garv Packaging non-woven bag manufacturing unit with modern machinery" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 DELIVERY ===== -->
+<section class="band delivery del">
+  <span class="snum">06</span>
+  <div class="wrap del-grid">
+    <div class="reveal">
+      <span class="kicker">Delivery network</span>
+      <h2 style="margin-top:12px">DELIVERY AVAILABLE<br><span>ACROSS INDIA</span></h2>
+      <ul class="del-states stagger">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Delhi NCR</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Uttar Pradesh</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Haryana</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Rajasthan</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Punjab</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Maharashtra</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Karnataka</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>All India</li>
+      </ul>
+    </div>
+    <div class="map-card reveal">
+      <div class="map-india">
+        <img src="garv-assets/gen-india-map.png" alt="Garv Packaging delivery network across India" loading="lazy" />
+        <svg class="map-truck-overlay" viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="60" cy="63" rx="50" ry="5" fill="#0C2A4D" opacity=".18"/>
+          <rect x="6" y="16" width="70" height="36" rx="4" fill="#fff" stroke="#0C2A4D" stroke-width="2.5"/>
+          <rect x="6" y="38" width="70" height="13" fill="#0FA04A"/>
+          <path d="M76 24h18l16 12v16H76z" fill="#0FA04A" stroke="#0A7E39" stroke-width="2"/>
+          <rect x="80" y="28" width="14" height="10" rx="2" fill="#bfe3f7" stroke="#0A7E39" stroke-width="1"/>
+          <rect x="106" y="44" width="4" height="5" rx="1" fill="#ffd564"/>
+          <circle cx="26" cy="54" r="9" fill="#0C2A4D"/><circle cx="26" cy="54" r="3.5" fill="#eef"/>
+          <circle cx="86" cy="54" r="9" fill="#0C2A4D"/><circle cx="86" cy="54" r="3.5" fill="#eef"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 WHY GARV ===== -->
+<section class="band why" id="why">
+  <span class="snum">07</span>
+  <div class="wrap">
+    <div class="why-head reveal">
+      <span class="kicker" style="color:var(--leaf)"><span style="background:var(--leaf)"></span>Why us</span>
+      <h2 style="margin-top:12px">WHY <span>GARV PACKAGING?</span></h2>
+    </div>
+    <div class="why-grid stagger reveal">
+      <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg></span><span>Best Quality Material</span></div>
+      <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.2c0-1.2 1.1-1.9 2.5-1.9s2.5.6 2.5 1.7c0 2.4-5 1.6-5 4 0 1.1 1.1 1.8 2.5 1.8s2.5-.6 2.5-1.8"/></svg></span><span>Competitive Price</span></div>
+      <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span><span>Quick Delivery</span></div>
+      <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2-1-3.5 0-1 1-1.5 2-1.5a8 8 0 1 0-8.7-2"/></svg></span><span>Attractive Printing</span></div>
+      <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></span><span>Bulk Order Specialist</span></div>
+      <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14 8 11l-4 1 4 4 1 4 3-4M13 10l3 3 4-1-4-4-1-4-3 4"/><path d="M8 16 4 20M16 8l4-4"/></svg></span><span>Trusted by Businesses</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 GALLERY ===== -->
+<section class="band" id="gallery" style="background:var(--soft)">
+  <span class="snum">08</span>
+  <div class="wrap">
+    <div class="gal-shell reveal">
+      <div class="gal-side">
+        <span class="kicker" style="color:#fff"><span style="background:#fff"></span></span>
+        <h2>PRODUCT<br>GALLERY</h2>
+        <div class="ul"></div>
+        <p style="color:rgba(255,255,255,.8);font-size:.94rem;margin-bottom:26px">A premium showcase of our non-woven, laminate &amp; printed bags.</p>
+        <a href="https://wa.me/919990658667" target="_blank" rel="noopener" class="pill" style="background:#fff;color:var(--green-d)">View Gallery
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="gal-grid stagger">
+        <div class="gtile"><img src="garv-assets/gen-hero-bags.png" alt="Non-woven shopping bags" loading="lazy" /></div>
+        <div class="gtile"><img src="garv-assets/gen-printing.png" alt="Custom printed branded bags" loading="lazy" /></div>
+        <div class="gtile"><img src="garv-assets/gen-eco.png" alt="Eco non-woven grocery bag" loading="lazy" /></div>
+        <div class="gtile"><img src="garv-assets/gen-factory.png" alt="Bag manufacturing unit" loading="lazy" /></div>
+        <div class="gtile poster"><img src="garv-assets/poster-products.jpeg" alt="Garv Packaging non-woven bags" loading="lazy" /></div>
+        <div class="gtile poster"><img src="garv-assets/poster-nonwoven.jpeg" alt="Go non-woven, say no to plastic" loading="lazy" /></div>
+        <div class="gtile poster"><img src="garv-assets/poster-responsible.jpeg" alt="Be responsible — reusable bags" loading="lazy" /></div>
+        <div class="gtile"><img src="garv-assets/gen-prod-laminate.png" alt="Glossy laminated leader bags" loading="lazy" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 CONTACT ===== -->
+<section class="band contact" id="contact">
+  <span class="snum">09</span>
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker">Get in touch</span>
+      <h2 style="margin-top:12px">READY TO ORDER?</h2>
+      <ul class="contact-info">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><span><small>Phone</small><b>9990658667 · 7678216534</b></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small>Location</small><b>Khasara No. 952, Rice Mill Road, Rithala Industrial Area, Delhi – 110085</b></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg></span><span><small>Shipping</small><b>Delivery Available Across India</b></span></li>
+      </ul>
+      <a href="https://wa.me/919990658667" target="_blank" rel="noopener" class="pill pill-wa" style="margin-top:26px">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg>
+        WhatsApp Now</a>
+    </div>
+    <div class="enq reveal">
+      <span class="kicker">Send us an enquiry</span>
+      <form onsubmit="sendEnquiry(event)">
+        <input type="text" id="f_name" placeholder="Your Name" required />
+        <input type="tel" id="f_phone" placeholder="Your Mobile Number" required />
+        <input type="email" id="f_email" class="full" placeholder="Your Email" />
+        <textarea id="f_req" class="full" rows="3" placeholder="Your Requirement (bag type, size, quantity, printing)"></textarea>
+        <button type="submit" class="pill pill-green">Send Enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <p style="font-size:.8rem;color:var(--muted);margin-top:12px">Submitting opens WhatsApp with your enquiry pre-filled — fastest way to reach us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 FINAL CTA ===== -->
+<section class="band final">
+  <div class="leaf-bg">
+    <svg style="top:24px;left:6%;width:70px;transform:rotate(30deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z"/></svg>
+    <svg style="bottom:24px;right:8%;width:90px;transform:rotate(-30deg)" viewBox="0 0 24 24" fill="currentColor"><path d="M5 21c0-9 6-15 16-16C20 14 14 21 5 21Z"/></svg>
+  </div>
+  <span class="snum">10</span>
+  <div class="wrap final-in">
+    <h2>Let's Make Our Planet<span>GREENER &amp; CLEANER 🌿</span></h2>
+    <div class="brand-lock">
+      <img src="garv-assets/logo-trans.png" alt="Garv Packaging — Bags That Define" class="cta-logo" />
+    </div>
+    <div class="quote">Bags That Define</div>
+    <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>9990658667 &nbsp;|&nbsp; 7678216534</div>
+    <a href="https://wa.me/919990658667?text=Hi%20Garv%20Packaging%2C%20I'd%20like%20a%20free%20quote." target="_blank" rel="noopener" class="pill pill-green" style="font-size:1.05rem;padding:1em 2em">Get Free Quote Today!
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr"></span> Garv Packaging. All Rights Reserved.</span>
+    <nav class="foot-nav">
+      <a href="#top">Home</a><a href="#about">About Us</a><a href="#products">Products</a>
+      <a href="#gallery">Gallery</a><a href="#why">Why Us</a><a href="#contact">Contact Us</a>
+    </nav>
+    <span>Rithala, Delhi – 110085 · Pan-India Delivery</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919990658667" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 11.97c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const header=document.getElementById('header');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const toggle=document.getElementById('menuToggle'),navMid=document.getElementById('navMid');
+  navMid.classList.add('mob');
+  toggle.addEventListener('click',()=>navMid.classList.toggle('open'));
+  navMid.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navMid.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  function sendEnquiry(e){
+    e.preventDefault();
+    const n=document.getElementById('f_name').value.trim();
+    const p=document.getElementById('f_phone').value.trim();
+    const m=document.getElementById('f_email').value.trim();
+    const r=document.getElementById('f_req').value.trim();
+    const msg=`*New Enquiry — Garv Packaging*%0A%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p)}%0AEmail: ${encodeURIComponent(m||'-')}%0ARequirement: ${encodeURIComponent(r||'-')}`;
+    window.open(`https://wa.me/919990658667?text=${msg}`,'_blank');
+  }
+</script>
+</body>
+</html>

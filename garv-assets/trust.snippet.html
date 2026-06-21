@@ -1,0 +1,181 @@
+<!-- =====================================================================
+     GARV PACKAGING — TRUST SNIPPET
+     Self-contained. Paste-ready. No JS, no external CSS, inline SVGs only.
+     Two parts below: PART A (Trust strip band) + PART B (Hero mini-badges).
+     New class prefixes: trust-  /  hbadge-   (won't clobber existing CSS).
+     Reuses existing tokens: --green --green-d --navy --leaf --gold --soft
+     --ink --muted, fonts var(--display)/var(--body), and the .wrap pattern.
+     ===================================================================== -->
+
+<style>
+  /* ---------- PART A: Trust strip band ---------- */
+  .trust-band{
+    background:var(--soft, #F4F8F3);
+    border-top:3px solid var(--green, #0FA04A);
+    padding:34px 0;
+  }
+  .trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    align-items:stretch;
+  }
+  .trust-cell{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:6px;
+    padding:6px 14px;
+    position:relative;
+  }
+  /* subtle divider between cells */
+  .trust-cell:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:-12px;top:14%;bottom:14%;
+    width:1px;
+    background:rgba(12,42,77,.12);
+  }
+  .trust-num{
+    font-family:var(--display, "Sora", sans-serif);
+    font-weight:800;
+    font-size:clamp(1.9rem, 3.4vw, 2.7rem);
+    line-height:1;
+    color:var(--green, #0FA04A);
+    letter-spacing:-.01em;
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+  }
+  .trust-num svg{width:26px;height:26px;flex:none;color:var(--gold, #E0A93B)}
+  .trust-label{
+    font-family:var(--body, "Plus Jakarta Sans", sans-serif);
+    font-weight:600;
+    font-size:.82rem;
+    letter-spacing:.04em;
+    color:var(--muted, #5E6E63);
+  }
+  /* fixed 4th cell — shield / assurance */
+  .trust-cell.trust-fixed{flex-direction:row;gap:13px;text-align:left;align-items:center;justify-content:center}
+  .trust-shield{
+    width:48px;height:48px;border-radius:50%;flex:none;
+    display:grid;place-items:center;
+    background:#fff;
+    color:var(--green, #0FA04A);
+    box-shadow:0 12px 26px -14px rgba(15,160,74,.6);
+  }
+  .trust-shield svg{width:25px;height:25px}
+  .trust-fixed b{
+    font-family:var(--display, "Sora", sans-serif);
+    font-weight:700;font-size:1.02rem;line-height:1.15;
+    color:var(--navy, #0C2A4D);display:block;
+  }
+  .trust-fixed small{
+    font-family:var(--body, "Plus Jakarta Sans", sans-serif);
+    font-weight:600;font-size:.78rem;color:var(--green-d, #0A7E39);
+    letter-spacing:.02em;
+  }
+
+  @media(max-width:860px){
+    .trust-grid{grid-template-columns:1fr 1fr;gap:30px 20px}
+    .trust-cell:not(:last-child)::after{display:none}
+    .trust-cell.trust-fixed{justify-content:center}
+  }
+  @media(max-width:460px){
+    .trust-grid{grid-template-columns:1fr}
+  }
+
+  /* ---------- PART B: Hero mini-badges (sit on dark navy) ---------- */
+  .hbadge-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:11px;
+    margin-top:18px;
+  }
+  .hbadge{
+    display:inline-flex;
+    align-items:center;
+    gap:.5em;
+    font-family:var(--body, "Plus Jakarta Sans", sans-serif);
+    font-weight:600;
+    font-size:.82rem;
+    line-height:1;
+    color:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.22);
+    padding:.62em 1.05em;
+    border-radius:100px;
+    white-space:nowrap;
+    backdrop-filter:blur(4px);
+  }
+  .hbadge svg{width:15px;height:15px;flex:none;color:var(--leaf, #84C341)}
+</style>
+
+
+<!-- =====================================================================
+     PART A — TRUST STRIP BAND
+     Drop near the top of the page. Inner content uses .wrap for width match.
+     ===================================================================== -->
+<!-- TODO: replace {{YEARS}}/{{CAPACITY}}/{{CLIENTS}} with real client figures -->
+<section class="trust-band">
+  <div class="wrap">
+    <div class="trust-grid">
+
+      <div class="trust-cell">
+        <div class="trust-num">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          {{YEARS}}+
+        </div>
+        <div class="trust-label">Years in Business</div>
+      </div>
+
+      <div class="trust-cell">
+        <div class="trust-num">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+          {{CAPACITY}}
+        </div>
+        <div class="trust-label">Bags / Day Capacity</div>
+      </div>
+
+      <div class="trust-cell">
+        <div class="trust-num">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          {{CLIENTS}}+
+        </div>
+        <div class="trust-label">Happy Clients</div>
+      </div>
+
+      <div class="trust-cell trust-fixed">
+        <span class="trust-shield">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <span>
+          <b>Direct Manufacturer</b>
+          <small>GST Registered</small>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     PART B — HERO MINI-BADGES
+     Place inside the dark navy hero, under the CTA buttons.
+     ===================================================================== -->
+<div class="hbadge-row">
+  <span class="hbadge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    GST Registered
+  </span>
+  <span class="hbadge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18M9 21v-6h6v6"/></svg>
+    Direct Manufacturer
+  </span>
+  <span class="hbadge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>
+    Pan-India Delivery
+  </span>
+</div>
